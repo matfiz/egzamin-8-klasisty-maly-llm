@@ -41,6 +41,9 @@ Wymagania: macOS na Apple Silicon, [`uv`](https://github.com/astral-sh/uv),
 klucz Anthropic API (Claude pełni rolę klucza odpowiedzi + sędziego otwartych).
 
 ```bash
+git clone https://github.com/matfiz/egzamin-8-klasisty-maly-llm.git
+cd egzamin-8-klasisty-maly-llm
+
 # 1. Pobierz arkusz CKE
 curl -o matematyka-2026-egzamin-osmoklasisty.pdf \
   https://arkusze.pl/osmoklasisty/matematyka-2026-egzamin-osmoklasisty.pdf
