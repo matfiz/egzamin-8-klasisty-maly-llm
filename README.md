@@ -10,19 +10,20 @@ Sprawdzam to na oficjalnym arkuszu CKE z 12 maja 2026 (20 zadań, 30 pkt max).
 | Model | Wynik | Zamknięte | Otwarte |
 |---|---|---|---|
 | 🥇 **Bielik-Minitron 7B v3** (SpeakLeash, na bazie NVIDIA Nemotron) | **25 / 30 (83%)** | 11/14 | 14/16 pkt |
-| 🥈 **Bielik 4.5B v3** (SpeakLeash) | **24 / 30 (80%)** | 12/14 | 12/16 pkt |
 | 🥈 **Gemma 4 E4B** (Google, text-only) | **24 / 30 (80%)** | 10/14 | 14/16 pkt |
-| 4. Gemma 3 4B IT (text-only) | 18 / 30 (60%) | 9/14 | 9/16 pkt |
-| 5. Gemma 3 4B IT (multimodal) | 14 / 30 (47%) | 8/14 | 6/16 pkt |
-| 6. Llama-PLLuM 8B Instruct (CYFRAGOVPL) | 3 / 30 (10%) | 1/14 | 2/16 pkt |
+| 🥉 **Bielik 4.5B v3** (SpeakLeash) | **23 / 30 (77%)** | 12/14 | 11/16 pkt |
+| 🥉 **Gemma 4 E4B** (Google, multimodal) | **23 / 30 (77%)** | 11/14 | 12/16 pkt |
+| 5. Gemma 3 4B IT (text-only) | 18 / 30 (60%) | 9/14 | 9/16 pkt |
+| 6. Gemma 3 4B IT (multimodal) | 14 / 30 (47%) | 8/14 | 6/16 pkt |
+| 7. Llama-PLLuM 8B Instruct (CYFRAGOVPL) | 3 / 30 (10%) | 1/14 | 2/16 pkt |
 
 Pełna tabela per-zadaniowa + wydajność: [`results/raport.md`](results/raport.md).
 
 **TL;DR:**
 - **Bielik-Minitron 7B** (najnowszy, na bazie NVIDIA Llama-3.1-Nemotron z pruningiem Minitron) wygrywa jako pierwszy model w serii powyżej 80%.
 - **Gemma 4 zrobiła ogromny skok** vs Gemma 3 na tej samej ilości parametrów (+6 pkt) i wyrównała z Bielikiem 4.5B.
-- **PLLuM 8B** (polski rządowy LLM) zaskakuje in minus z 3/30 — odpowiada bez rozumowania, krótkimi literami. „Polski LLM" to nie automatycznie dobry LLM.
-- **Multimodalność Gemmy 3 zaszkodziła** o 4 pkt vs ta sama Gemma w text-only (4-bit kwantyzacja albo rozpraszanie modelu obrazkami).
+- **Vision tower naprawiony w Gemma 4.** Multimodalność w Gemma 3 zabierała 4 pkt vs text-only. W Gemma 4 zabiera tylko 1 pkt (w granicach szumu sędziego). Małe modele edge dorastają do multimodalności „za darmo".
+- **PLLuM 8B** (polski rządowy LLM) zaskakuje in minus z 3/30, odpowiada bez rozumowania, krótkimi literami. „Polski LLM" to nie automatycznie dobry LLM.
 - Wszystko offline, na Apple Silicon przez MLX, ~3 minuty inferencji per model.
 
 ## Architektura
@@ -33,6 +34,7 @@ Pełna tabela per-zadaniowa + wydajność: [`results/raport.md`](results/raport.
 03_run_gemma.py            →  results/gemma_odpowiedzi.json          (Gemma 3 multimodal, mlx-vlm)
 03b_run_gemma_text.py      →  results/gemma_text_odpowiedzi.json     (Gemma 3 text-only, mlx-lm)
 03c_run_gemma4_text.py     →  results/gemma4_text_odpowiedzi.json    (Gemma 4 text-only, mlx-vlm bez image)
+03d_run_gemma4_mm.py       →  results/gemma4_mm_odpowiedzi.json      (Gemma 4 multimodal, mlx-vlm)
 04_run_bielik.py           →  results/bielik_odpowiedzi.json         (Bielik 4.5B, mlx-lm)
 04b_run_bielik_minitron.py →  results/bielik_minitron_odpowiedzi.json (Bielik-Minitron 7B, mlx-lm)
 04c_run_pllum.py           →  results/pllum_odpowiedzi.json          (Llama-PLLuM 8B, mlx-lm)
@@ -85,6 +87,7 @@ uv run python scripts/02_klucz_claude.py          # klucz odpowiedzi
 uv run python scripts/03_run_gemma.py             # Gemma 3 multimodal
 uv run python scripts/03b_run_gemma_text.py      # Gemma 3 text-only
 uv run python scripts/03c_run_gemma4_text.py     # Gemma 4 text-only
+uv run python scripts/03d_run_gemma4_mm.py        # Gemma 4 multimodal
 uv run python scripts/04_run_bielik.py            # Bielik 4.5B v3
 uv run python scripts/04b_run_bielik_minitron.py  # Bielik-Minitron 7B
 uv run python scripts/04c_run_pllum.py            # PLLuM 8B
@@ -107,7 +110,7 @@ Modele do lokalnej konwersji:
 - **Bielik-Minitron 7B v3 Instruct** (SpeakLeash): polski model na bazie NVIDIA Llama-3.1-Nemotron, pruningowany techniką Minitron, gated na HF, lokalna konwersja do MLX 8-bit.
 - **Llama-PLLuM 8B Instruct** (CYFRAGOVPL): polski instruction tuning na bazie Llama 3.1 8B, lokalna konwersja do MLX 8-bit.
 - **Gemma 3 4B IT** (Google): 4-bit MLX, dwa warianty: multimodalny (mlx-vlm z obrazkami) i text-only (mlx-lm z opisami rysunków).
-- **Gemma 4 E4B IT** (Google): nowsza edycja edge, 4-bit MLX, uruchomiona text-only przez mlx-vlm (bez obrazków).
+- **Gemma 4 E4B IT** (Google): nowsza edycja edge, 4-bit MLX, dwa warianty: multimodalny (mlx-vlm z obrazkami) i text-only (mlx-vlm bez obrazków).
 
 ## Uwagi metodyczne
 

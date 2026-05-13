@@ -33,6 +33,7 @@ MODELE: list[tuple[str, Path]] = [
     ("gemma", ROOT / "results" / "gemma_odpowiedzi.json"),
     ("gemma_text", ROOT / "results" / "gemma_text_odpowiedzi.json"),
     ("gemma4_text", ROOT / "results" / "gemma4_text_odpowiedzi.json"),
+    ("gemma4_mm", ROOT / "results" / "gemma4_mm_odpowiedzi.json"),
     ("bielik", ROOT / "results" / "bielik_odpowiedzi.json"),
     ("bielik_minitron", ROOT / "results" / "bielik_minitron_odpowiedzi.json"),
     ("pllum", ROOT / "results" / "pllum_odpowiedzi.json"),

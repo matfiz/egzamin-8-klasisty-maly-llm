@@ -23,6 +23,7 @@ MODELE = [
     ("pllum", "Llama-PLLuM 8B Instruct (8-bit, text-only)", "PLLuM", ROOT / "results" / "pllum_odpowiedzi.json"),
     ("gemma_text", "Gemma 3 4B IT (4-bit, text-only)", "Gemma3T", ROOT / "results" / "gemma_text_odpowiedzi.json"),
     ("gemma4_text", "Gemma 4 E4B IT (4-bit, text-only)", "Gemma4T", ROOT / "results" / "gemma4_text_odpowiedzi.json"),
+    ("gemma4_mm", "Gemma 4 E4B IT (4-bit, multimodal)", "Gemma4MM", ROOT / "results" / "gemma4_mm_odpowiedzi.json"),
     ("gemma", "Gemma 3 4B IT (4-bit, multimodal)", "Gemma3MM", ROOT / "results" / "gemma_odpowiedzi.json"),
 ]
 
