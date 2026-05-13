@@ -9,7 +9,7 @@ Sprawdzam to na oficjalnym arkuszu CKE z 12 maja 2026 (20 zadań, 30 pkt max).
 
 | Model | Wynik | Zamknięte | Otwarte |
 |---|---|---|---|
-| 🥇 **Bielik-Minitron 7B v3** (SpeakLeash, na bazie NVIDIA Nemotron) | **25 / 30 (83%)** | 11/14 | 14/16 pkt |
+| 🥇 **Bielik-Minitron 7B v3** (SpeakLeash, kompresja Bielika 11B v3) | **25 / 30 (83%)** | 11/14 | 14/16 pkt |
 | 🥈 **Gemma 4 E4B** (Google, text-only) | **24 / 30 (80%)** | 10/14 | 14/16 pkt |
 | 🥉 **Bielik 4.5B v3** (SpeakLeash) | **23 / 30 (77%)** | 12/14 | 11/16 pkt |
 | 🥉 **Gemma 4 E4B** (Google, multimodal) | **23 / 30 (77%)** | 11/14 | 12/16 pkt |
@@ -20,7 +20,7 @@ Sprawdzam to na oficjalnym arkuszu CKE z 12 maja 2026 (20 zadań, 30 pkt max).
 Pełna tabela per-zadaniowa + wydajność: [`results/raport.md`](results/raport.md).
 
 **TL;DR:**
-- **Bielik-Minitron 7B** (najnowszy, na bazie NVIDIA Llama-3.1-Nemotron z pruningiem Minitron) wygrywa jako pierwszy model w serii powyżej 80%.
+- **Bielik-Minitron 7B** (skompresowana wersja Bielika 11B v3, -33% parametrów przez structured pruning + distillation) wygrywa jako pierwszy model w serii powyżej 80%.
 - **Gemma 4 zrobiła ogromny skok** vs Gemma 3 na tej samej ilości parametrów (+6 pkt) i wyrównała z Bielikiem 4.5B.
 - **Vision tower naprawiony w Gemma 4.** Multimodalność w Gemma 3 zabierała 4 pkt vs text-only. W Gemma 4 zabiera tylko 1 pkt (w granicach szumu sędziego). Małe modele edge dorastają do multimodalności „za darmo".
 - **PLLuM 8B** (polski rządowy LLM) zaskakuje in minus z 3/30, odpowiada bez rozumowania, krótkimi literami. „Polski LLM" to nie automatycznie dobry LLM.
@@ -107,7 +107,7 @@ Modele do lokalnej konwersji:
 ## Uruchamiane modele
 
 - **Bielik 4.5B v3 Instruct** (SpeakLeash): polski LLM ogólnego zastosowania, 8-bit MLX (oficjalne wagi).
-- **Bielik-Minitron 7B v3 Instruct** (SpeakLeash): polski model na bazie NVIDIA Llama-3.1-Nemotron, pruningowany techniką Minitron, gated na HF, lokalna konwersja do MLX 8-bit.
+- **Bielik-Minitron 7B v3 Instruct** (SpeakLeash): skompresowana wersja **Bielika-11B-v3.0** (-33% parametrów, z 11.04B do 7.35B) przez structured pruning + knowledge distillation z użyciem NVIDIA Model Optimizer i NeMo Framework (podejście inspirowane techniką Minitron). [Paper: arxiv.org/abs/2603.11881](https://arxiv.org/abs/2603.11881). Gated na HF, lokalna konwersja do MLX 8-bit.
 - **Llama-PLLuM 8B Instruct** (CYFRAGOVPL): polski instruction tuning na bazie Llama 3.1 8B, lokalna konwersja do MLX 8-bit.
 - **Gemma 3 4B IT** (Google): 4-bit MLX, dwa warianty: multimodalny (mlx-vlm z obrazkami) i text-only (mlx-lm z opisami rysunków).
 - **Gemma 4 E4B IT** (Google): nowsza edycja edge, 4-bit MLX, dwa warianty: multimodalny (mlx-vlm z obrazkami) i text-only (mlx-vlm bez obrazków).

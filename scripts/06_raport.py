@@ -125,7 +125,7 @@ Format komórek: `odpowiedź (zdobyte_pkt)`. Dla zadań otwartych pole odpowiedz
 ## Uruchamiane modele
 
 - **Bielik 4.5B v3 Instruct** (SpeakLeash): polski LLM ogólnego zastosowania, 8-bit MLX.
-- **Bielik-Minitron 7B v3 Instruct** (SpeakLeash, NVIDIA-derived): polski model na bazie Llama-3.1-Nemotron pruningowany techniką Minitron, 8-bit MLX po konwersji.
+- **Bielik-Minitron 7B v3 Instruct** (SpeakLeash): skompresowana wersja **Bielika-11B-v3.0** (-33% parametrów) przez structured pruning + knowledge distillation z NVIDIA Model Optimizer i NeMo Framework (podejście inspirowane Minitronem). Paper: arxiv.org/abs/2603.11881. 8-bit MLX po konwersji.
 - **Llama-PLLuM 8B Instruct** (CYFRAGOVPL): polski instruction-tuning na Llama 3.1 8B, 8-bit MLX po konwersji.
 - **Gemma 3 4B IT** (Google): 4-bit MLX, w dwóch wariantach — multimodalnym (`mlx-vlm`, z obrazkami) i text-only (`mlx-lm`, z opisami).
 - **Gemma 4 E4B IT** (Google): nowsza edycja edge, 4-bit MLX, uruchomiona text-only przez `mlx-vlm` bez przekazywania obrazków.

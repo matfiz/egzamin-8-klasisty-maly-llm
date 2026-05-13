@@ -1,9 +1,10 @@
 """
 Faza 4b: Bielik-Minitron-7B v3 Instruct (text-only przez mlx-lm) na 20 zadaniach.
 
-Bielik Minitron 7B to wariant Bielika oparty na NVIDIA Llama-3.1-Nemotron
-przefiltrowanym techniką Minitron (pruning + distillation), wytrenowany
-przez SpeakLeash na polskim korpusie.
+Bielik-Minitron-7B to skompresowana wersja Bielika-11B-v3.0 (z 11.04B do 7.35B
+parametrów, -33%) przez structured pruning + knowledge distillation, z użyciem
+NVIDIA Model Optimizer i NeMo Framework. Podejście inspirowane techniką
+Minitron, ale base model to Bielik 11B, nie Nemotron. Paper: arxiv.org/abs/2603.11881.
 
 Wymagana akceptacja licencji + HF_TOKEN (model gated na HF).
 Konwersja do MLX:
