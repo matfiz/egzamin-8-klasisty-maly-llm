@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 0.61,
+    "tokens": 2,
+    "tokens_per_s": 3.3,
+    "raw": "B",
+    "odpowiedz": ""
+  },
+  {
+    "id": 2,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 1.21,
+    "tokens": 67,
+    "tokens_per_s": 55.5,
+    "raw": "Największym wspólnym dzielnikiem liczb 18 i 27 jest 9, a najmniejszą wspólną wielokrotnością liczb 2 i 4 jest 8. Zatem kod do otwarcia szafki Oli to 9888.",
+    "odpowiedz": ""
+  },
+  {
+    "id": 3,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.2,
+    "tokens": 2,
+    "tokens_per_s": 9.9,
+    "raw": "A",
+    "odpowiedz": ""
+  },
+  {
+    "id": 4,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.2,
+    "tokens": 2,
+    "tokens_per_s": 9.9,
+    "raw": "C",
+    "odpowiedz": ""
+  },
+  {
+    "id": 5,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.41,
+    "tokens": 14,
+    "tokens_per_s": 34.3,
+    "raw": "B. 0,2x + 0,4y",
+    "odpowiedz": ""
+  },
+  {
+    "id": 6,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.23,
+    "tokens": 2,
+    "tokens_per_s": 8.5,
+    "raw": "B",
+    "odpowiedz": ""
+  },
+  {
+    "id": 7,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 10.08,
+    "tokens": 634,
+    "tokens_per_s": 62.9,
+    "raw": "W każdym koszyku jest o 6 więcej jabłek niż pomarańczy, co oznacza, że ​​w każdym koszyku jest 6+6 = <<6+6=12>>12 jabłek więcej niż pomarańczy.\nW każdym koszyku jest taka sama liczba owoców, co oznacza, że ​​w każdym koszyku jest 400/2 = <<400/2=200>>200 owoców.\nJeśli w każdym koszyku jest 12 jabłek więcej niż pomarańczy, a w każdym koszyku jest 200 owoców, to w każdym koszyku jest 200-12 = <<200-12=188>>188 pomarańczy.\nJeśli w każdym koszyku jest 188 pomarańczy, a w każdym koszyku jest taka sama liczba owoców, to w 10 koszach jest 10*188 = <<10*188=1880>>1880 pomarańczy.\nJeśli w każdym koszyku jest 188 pomarańczy, a w każdym koszyku jest o 12 więcej jabłek niż pomarańczy, to w każdym koszyku jest 12+188 = <<12+188=200>>200 jabłek.\nJeśli w każdym koszyku jest 200 jabłek, a w każdym koszyku jest taka sama liczba owoców, to w 10 koszach jest 10*200 = <<10*200=2000>>2000 jabłek.\nW 10 koszach jest łącznie 2000 jabłek + 1880 pomarańczy = <<2000+1880=3880>>3880 owoców.\nW 10 koszach jest łącznie 3880 owoców, a w każdym koszyku jest taka sama liczba owoców, co oznacza, że ​​w 10 koszach jest 3880/10 = <<3880/10=388>>388 owoców w każdym koszyku.\nW 10 koszach jest łącznie 3880 owoców, a w każdym koszyku jest taka sama liczba owoców, co oznacza, że ​​w 10 koszach jest 3880/10 = <<3880/10=388>>388 owoców w każdym koszyku.\nW 10 koszach jest łącznie 3880 owoców, a w każdym koszyku jest taka sama liczba owoców, co oznacza, że ​​w 10 koszach jest 3880/10 = <<3880/10=388>>388 owoców w każdym koszyku.\nB",
+    "odpowiedz": ""
+  },
+  {
+    "id": 8,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.24,
+    "tokens": 2,
+    "tokens_per_s": 8.3,
+    "raw": "A",
+    "odpowiedz": ""
+  },
+  {
+    "id": 9,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.38,
+    "tokens": 13,
+    "tokens_per_s": 34.3,
+    "raw": "<odpowiedz>B</odpowiedz>",
+    "odpowiedz": "B"
+  },
+  {
+    "id": 10,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.27,
+    "tokens": 5,
+    "tokens_per_s": 18.7,
+    "raw": "P1 F2",
+    "odpowiedz": ""
+  },
+  {
+    "id": 11,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.27,
+    "tokens": 6,
+    "tokens_per_s": 22.3,
+    "raw": "B. 85°",
+    "odpowiedz": ""
+  },
+  {
+    "id": 12,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 0.44,
+    "tokens": 13,
+    "tokens_per_s": 29.2,
+    "raw": "P1. F1. P2. F2.",
+    "odpowiedz": ""
+  },
+  {
+    "id": 13,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 0.24,
+    "tokens": 2,
+    "tokens_per_s": 8.2,
+    "raw": "C",
+    "odpowiedz": ""
+  },
+  {
+    "id": 14,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 0.71,
+    "tokens": 32,
+    "tokens_per_s": 45.1,
+    "raw": "Pole powierzchni całkowitej otrzymanego prostopadłościanu jest równe 375.",
+    "odpowiedz": ""
+  },
+  {
+    "id": 15,
+    "typ": "otwarte",
+    "punkty_max": 2,
+    "ma_obrazek": false,
+    "czas_s": 1.75,
+    "tokens": 102,
+    "tokens_per_s": 58.3,
+    "raw": "Kartek czerwonych było 160 - 37 - 10 = <<160-37-10=113>>113.\nKartek niebieskich było 113 x 1,5 = <<113*1,5=168,5>>168,5.\nEla przygotowała 168,5 kartek niebieskich.\n<odpowiedz>Ela przygotowała 168,5 kartek niebieskich.</odpowiedz>",
+    "odpowiedz": "Ela przygotowała 168,5 kartek niebieskich."
+  },
+  {
+    "id": 16,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": false,
+    "czas_s": 4.02,
+    "tokens": 239,
+    "tokens_per_s": 59.5,
+    "raw": "Droga z Polanki do Jodłowa ma długość 48 km i samochód przejechał ją w czasie 40 minut. Prędkość samochodu wynosi 48/40 = <<48/40=1,2>>1,2 km/h.\nDroga z Jodłowa do Dębiny ma długość 123-48 = <<123-48=75>>75 km.\nPrzejazd z Jodłowa do Dębiny trwa 75/1,2 = <<75/1,2=62,5>>62,5 godziny.\n62,5 godziny to 62,5 x 60 = <<62,5*60=3750>>3750 minut.\nPrzejazd z Jodłowa do Dębiny trwa dłużej niż godzina, bo 3750 > 60.\n<odpowiedz>Przejazd z Jodłowa do Dębiny trwa dłużej niż godzina.</odpowiedz>",
+    "odpowiedz": "Przejazd z Jodłowa do Dębiny trwa dłużej niż godzina."
+  },
+  {
+    "id": 17,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": true,
+    "czas_s": 2.31,
+    "tokens": 135,
+    "tokens_per_s": 58.5,
+    "raw": "W turnieju tenisa stołowego wzięło udział 65 + 16 + 34 = <<65+16+34=115>>115 uczniów.\nLiczba wszystkich uczestników Dnia Sportu wynosi 15 + 65 + 46 + 16 + 34 = <<15+65+46+16+34=186>>186.\nProcent uczniów biorących udział w turnieju tenisa stołowego wynosi 115/186 x 100% = 61,8%.\n<odpowiedz>61,8%</odpowiedz>",
+    "odpowiedz": "61,8%"
+  },
+  {
+    "id": 18,
+    "typ": "otwarte",
+    "punkty_max": 2,
+    "ma_obrazek": true,
+    "czas_s": 5.11,
+    "tokens": 319,
+    "tokens_per_s": 62.4,
+    "raw": "Punkt S jest środkiem krawędzi DH, więc DH = 2S. Objętość sześcianu jest równa sześcianowi długości krawędzi, więc objętość sześcianu ABCDEFGH jest równa a3.\nObjętość ostrosłupa ACDS jest równa 1/3 objętości sześcianu ABCDEFGH, ponieważ ostrosłup ACDS jest ostrosłupem prawidłowym o kącie między ścianami 60 stopni, a ostrosłup prawidłowy o kącie między ścianami 60 stopni ma objętość równą 1/3 objętości sześcianu o tej samej podstawie. Zatem objętość ostrosłupa ACDS jest równa a3/3.\nObjętość ostrosłupa ACDS jest 1/3 objętości sześcianu ABCDEFGH, więc ostrosłup ACDS jest 1/3 razy mniejszy objętościowo od sześcianu ABCDEFGH.\n<odpowiedz>Ostrosłup ACDS jest 1/3 razy mniejszy objętościowo od sześcianu ABCDEFGH.</odpowiedz>",
+    "odpowiedz": "Ostrosłup ACDS jest 1/3 razy mniejszy objętościowo od sześcianu ABCDEFGH."
+  },
+  {
+    "id": 19,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": false,
+    "czas_s": 7.39,
+    "tokens": 469,
+    "tokens_per_s": 63.5,
+    "raw": "Pani Anna chce zmienić swój ogródek w łąkę kwietną. Jedno opakowanie z nasionami wystarcza na obsianie 25 m^2 powierzchni i kosztuje 23,80 zł. Ogródek pani Anny ma kształt trapezu, którego podstawy mają długości 18 m i 12 m, a wysokość jest równa 9 m. Musimy obliczyć całkowitą powierzchnię ogródka, aby obliczyć, ile opakowań z nasionami potrzeba do obsiania całej powierzchni.\nPierwsza podstawa ma długość 18 m, a druga 12 m. Łączna długość podstaw wynosi 18 m + 12 m = <<18+12=30>>30 m.\nWysokość trapezu wynosi 9 m, a łączna długość podstaw wynosi 30 m. Pole powierzchni trapezu wynosi 0,5 * 30 m * 9 m = <<0,5*30*9=13,5>>13,5 m^2.\nPani Anna chce obsiać całą powierzchnię swojego ogródka, więc potrzebuje 13,5 m^2 nasion. Jeden opakowanie z nasionami wystarcza na obsianie 25 m^2 powierzchni, więc potrzebuje 13,5 m^2 / 25 m^2 = <<13,5/25=0,54>>0,54 opakowania.\nNajmniejsza liczba opakowań z nasionami potrzebnych do obsiania całej powierzchni ogródka to 0,54 opakowania. Jedno opakowanie kosztuje 23,80 zł, więc pani Anna musi zapłacić 0,54 opakowań * 23,80 zł/opakowanie = <<0,54*23,8=12,96>>12,96 zł.\n#### 12,96",
+    "odpowiedz": ""
+  },
+  {
+    "id": 20,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": true,
+    "czas_s": 3.18,
+    "tokens": 191,
+    "tokens_per_s": 60.1,
+    "raw": "Obwód równoległoboku KLMN jest sumą długości jego boków. Długości boków równoległoboku KLMN to: \nKL = 3 + 3 = <<3+3=6>>6\nLM = 9 + 3 = <<9+3=12>>12\nKN = 3 + 3 = <<3+3=6>>6\nNM = 9 + 3 = <<9+3=12>>12\nZatem obwód równoległoboku KLMN wynosi: \nKL + LM + KN + NM = 6 + 12 + 6 + 12 = <<6+12+6+12=36>>36\n<odpowiedz>Obwód równoległoboku KLMN wynosi 36.</odpowiedz>",
+    "odpowiedz": "Obwód równoległoboku KLMN wynosi 36."
+  }
+]

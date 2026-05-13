@@ -1,6 +1,6 @@
 # Egzamin ósmoklasisty z matematyki 2026 — benchmark małych LLM-ów
 
-Czy otwarty model językowy ~4-5B parametrów uruchomiony lokalnie na MacBooku
+Czy otwarty model językowy ~4-8B parametrów uruchomiony lokalnie na MacBooku
 poradzi sobie z egzaminem ósmoklasisty z matematyki?
 
 Sprawdzam to na oficjalnym arkuszu CKE z 12 maja 2026 (20 zadań, 30 pkt max).
@@ -9,75 +9,111 @@ Sprawdzam to na oficjalnym arkuszu CKE z 12 maja 2026 (20 zadań, 30 pkt max).
 
 | Model | Wynik | Zamknięte | Otwarte |
 |---|---|---|---|
-| 🥇 **Bielik 4.5B v3** (8-bit, text-only) | **24 / 30 (80%)** | 12/14 | 12/16 pkt |
-| 🥈 Gemma 3 4B IT (4-bit, text-only) | 18 / 30 (60%) | 9/14 | 9/16 pkt |
-| 🥉 Gemma 3 4B IT (4-bit, multimodal) | 14 / 30 (47%) | 8/14 | 6/16 pkt |
+| 🥇 **Bielik-Minitron 7B v3** (SpeakLeash, na bazie NVIDIA Nemotron) | **25 / 30 (83%)** | 11/14 | 14/16 pkt |
+| 🥈 **Bielik 4.5B v3** (SpeakLeash) | **24 / 30 (80%)** | 12/14 | 12/16 pkt |
+| 🥈 **Gemma 4 E4B** (Google, text-only) | **24 / 30 (80%)** | 10/14 | 14/16 pkt |
+| 4. Gemma 3 4B IT (text-only) | 18 / 30 (60%) | 9/14 | 9/16 pkt |
+| 5. Gemma 3 4B IT (multimodal) | 14 / 30 (47%) | 8/14 | 6/16 pkt |
+| 6. Llama-PLLuM 8B Instruct (CYFRAGOVPL) | 3 / 30 (10%) | 1/14 | 2/16 pkt |
 
 Pełna tabela per-zadaniowa + wydajność: [`results/raport.md`](results/raport.md).
 
 **TL;DR:**
-- Polski **Bielik 4.5B** (SpeakLeash) wygrywa z Gemmą 3 nawet w fair compare (text-only).
-- **Multimodalność Gemmy zaszkodziła** o 4 pkt vs. ta sama Gemma w text-only.
-- Wszystko offline, na Apple M5 Max przez MLX, ~3 min inferencji.
+- **Bielik-Minitron 7B** (najnowszy, na bazie NVIDIA Llama-3.1-Nemotron z pruningiem Minitron) wygrywa jako pierwszy model w serii powyżej 80%.
+- **Gemma 4 zrobiła ogromny skok** vs Gemma 3 na tej samej ilości parametrów (+6 pkt) i wyrównała z Bielikiem 4.5B.
+- **PLLuM 8B** (polski rządowy LLM) zaskakuje in minus z 3/30 — odpowiada bez rozumowania, krótkimi literami. „Polski LLM" to nie automatycznie dobry LLM.
+- **Multimodalność Gemmy 3 zaszkodziła** o 4 pkt vs ta sama Gemma w text-only (4-bit kwantyzacja albo rozpraszanie modelu obrazkami).
+- Wszystko offline, na Apple Silicon przez MLX, ~3 minuty inferencji per model.
 
 ## Architektura
 
 ```
-01_przygotuj_zadania.py  →  data/zadania.json + obrazki/zNN.png
-02_klucz_claude.py       →  data/klucz_odpowiedzi.json  (Claude Opus 4.7)
-03_run_gemma.py          →  results/gemma_odpowiedzi.json       (multimodal, mlx-vlm)
-03b_run_gemma_text.py    →  results/gemma_text_odpowiedzi.json  (text-only, mlx-lm)
-04_run_bielik.py         →  results/bielik_odpowiedzi.json      (text-only, mlx-lm)
-05_ocen.py               →  results/ocena_szczegolowa.json      (Claude jako sędzia otwartych)
-06_raport.py             →  results/raport.md
+01_przygotuj_zadania.py    →  data/zadania.json + obrazki/zNN.png
+02_klucz_claude.py         →  data/klucz_odpowiedzi.json  (Claude Opus 4.7)
+03_run_gemma.py            →  results/gemma_odpowiedzi.json          (Gemma 3 multimodal, mlx-vlm)
+03b_run_gemma_text.py      →  results/gemma_text_odpowiedzi.json     (Gemma 3 text-only, mlx-lm)
+03c_run_gemma4_text.py     →  results/gemma4_text_odpowiedzi.json    (Gemma 4 text-only, mlx-vlm bez image)
+04_run_bielik.py           →  results/bielik_odpowiedzi.json         (Bielik 4.5B, mlx-lm)
+04b_run_bielik_minitron.py →  results/bielik_minitron_odpowiedzi.json (Bielik-Minitron 7B, mlx-lm)
+04c_run_pllum.py           →  results/pllum_odpowiedzi.json          (Llama-PLLuM 8B, mlx-lm)
+05_ocen.py                 →  results/ocena_szczegolowa.json         (Claude sędzią otwartych)
+06_raport.py               →  results/raport.md
 ```
 
-Dla każdego modelu prompt jest taki sam (`prompts/system_*.txt`), temperatura 0,
+Dla każdego modelu identyczny prompt (`prompts/system_*.txt`), temperatura 0,
 parsowanie odpowiedzi tolerancyjne (`<odpowiedz>`, `\boxed{}`, fallback regex).
 
 ## Uruchomienie
 
 Wymagania: macOS na Apple Silicon, [`uv`](https://github.com/astral-sh/uv),
-klucz Anthropic API (Claude pełni rolę klucza odpowiedzi + sędziego otwartych).
+klucz Anthropic API (Claude pełni rolę klucza odpowiedzi + sędziego otwartych),
+HF token (Bielik-Minitron 7B jest gated).
 
 ```bash
 git clone https://github.com/matfiz/egzamin-8-klasisty-maly-llm.git
 cd egzamin-8-klasisty-maly-llm
 
-# 1. Pobierz arkusz CKE
+# 1. Pobierz arkusz CKE (nie jest w repo)
 curl -o matematyka-2026-egzamin-osmoklasisty.pdf \
   https://arkusze.pl/osmoklasisty/matematyka-2026-egzamin-osmoklasisty.pdf
 
-# 2. Klucz API
-echo 'ANTHROPIC_API_KEY=sk-ant-...' > .env
+# 2. Klucze API w .env
+cat > .env <<EOF
+ANTHROPIC_API_KEY=sk-ant-...
+HF_TOKEN=hf_...      # potrzebny tylko dla Bielik-Minitron 7B (gated repo)
+EOF
 
 # 3. Dependencies (mlx-lm, mlx-vlm, anthropic, pymupdf, pillow, dotenv, tabulate)
 uv sync
 
-# 4. Pełen pipeline
-uv run python scripts/01_przygotuj_zadania.py    # wyciąga PNG per zadanie
-uv run python scripts/02_klucz_claude.py         # klucz odpowiedzi
-uv run python scripts/03_run_gemma.py            # Gemma multimodal
-uv run python scripts/03b_run_gemma_text.py     # Gemma text-only
-uv run python scripts/04_run_bielik.py           # Bielik
-uv run python scripts/05_ocen.py                 # ocena
-uv run python scripts/06_raport.py               # raport
+# 4. Konwersja MLX dla modeli bez gotowych wag MLX
+#    (Bielik 4.5B v3 i Gemma 3/4 mają gotowe MLX, te dwa wymagają konwersji)
+uv run python -m mlx_lm convert \
+  --hf-path CYFRAGOVPL/Llama-PLLuM-8B-instruct \
+  --mlx-path ~/.cache/huggingface/local-mlx/Llama-PLLuM-8B-instruct-mlx-8bit \
+  -q --q-bits 8
+
+# wymaga akceptacji licencji na huggingface.co/speakleash/Bielik-Minitron-7B-v3.0-Instruct
+uv run python -m mlx_lm convert \
+  --hf-path speakleash/Bielik-Minitron-7B-v3.0-Instruct \
+  --mlx-path ~/.cache/huggingface/local-mlx/Bielik-Minitron-7B-mlx-8bit \
+  -q --q-bits 8
+
+# 5. Pełen pipeline
+uv run python scripts/01_przygotuj_zadania.py     # wyciąga PNG per zadanie
+uv run python scripts/02_klucz_claude.py          # klucz odpowiedzi
+uv run python scripts/03_run_gemma.py             # Gemma 3 multimodal
+uv run python scripts/03b_run_gemma_text.py      # Gemma 3 text-only
+uv run python scripts/03c_run_gemma4_text.py     # Gemma 4 text-only
+uv run python scripts/04_run_bielik.py            # Bielik 4.5B v3
+uv run python scripts/04b_run_bielik_minitron.py  # Bielik-Minitron 7B
+uv run python scripts/04c_run_pllum.py            # PLLuM 8B
+uv run python scripts/05_ocen.py                  # ocena (Claude sędzia)
+uv run python scripts/06_raport.py                # raport
 ```
 
-Modele MLX pobiorą się automatycznie z HF przy pierwszym uruchomieniu
-(`mlx-community/gemma-3-4b-it-4bit` ~3 GB, `speakleash/Bielik-4.5B-v3.0-Instruct-MLX-8bit` ~5 GB).
+Modele MLX pobiorą się automatycznie z HF przy pierwszym uruchomieniu:
+- `mlx-community/gemma-3-4b-it-4bit` (~3 GB)
+- `mlx-community/gemma-4-e4b-it-4bit` (~5 GB, model multimodalny ładowany przez mlx-vlm)
+- `speakleash/Bielik-4.5B-v3.0-Instruct-MLX-8bit` (~5 GB)
+
+Modele do lokalnej konwersji:
+- `speakleash/Bielik-Minitron-7B-v3.0-Instruct` (~14 GB safetensors, gated, ~8 GB po Q8)
+- `CYFRAGOVPL/Llama-PLLuM-8B-instruct` (~16 GB safetensors, ~8 GB po Q8)
+
+## Uruchamiane modele
+
+- **Bielik 4.5B v3 Instruct** (SpeakLeash): polski LLM ogólnego zastosowania, 8-bit MLX (oficjalne wagi).
+- **Bielik-Minitron 7B v3 Instruct** (SpeakLeash): polski model na bazie NVIDIA Llama-3.1-Nemotron, pruningowany techniką Minitron, gated na HF, lokalna konwersja do MLX 8-bit.
+- **Llama-PLLuM 8B Instruct** (CYFRAGOVPL): polski instruction tuning na bazie Llama 3.1 8B, lokalna konwersja do MLX 8-bit.
+- **Gemma 3 4B IT** (Google): 4-bit MLX, dwa warianty: multimodalny (mlx-vlm z obrazkami) i text-only (mlx-lm z opisami rysunków).
+- **Gemma 4 E4B IT** (Google): nowsza edycja edge, 4-bit MLX, uruchomiona text-only przez mlx-vlm (bez obrazków).
 
 ## Uwagi metodyczne
 
-- **Klucz odpowiedzi** generowany przez Claude Opus 4.7 z PDF jako kontekst,
-  następnie **ręcznie zweryfikowany** — Claude pomylił się w 5 zadaniach (głównie
-  niespójność między rozumowaniem a finalną literą). Po weryfikacji klucz
-  zgadza się z moim obliczeniem matematycznym.
-- **Opisy rysunków dla modeli text-only** są zwięzłe i neutralne (np. *„sześcian
-  ABCDEFGH, punkt S w środku krawędzi DH"*) — bez podpowiadania odpowiedzi.
-  Bielik i Gemma text-only dostają dokładnie te same opisy.
-- **Ocena zadań otwartych** wg standardowych kryteriów CKE: pełna metoda +
-  wynik = max pkt, błąd rachunkowy = N-1, istotny postęp = częściowe pkt.
+- **Klucz odpowiedzi** generowany przez Claude Opus 4.7 z PDF jako kontekst, następnie ręcznie zweryfikowany. Claude pomylił się w 5 zadaniach (głównie niespójność między rozumowaniem a finalną literą). Po weryfikacji klucz zgadza się z obliczeniem matematycznym.
+- **Opisy rysunków dla modeli text-only** są zwięzłe i neutralne (np. *„sześcian ABCDEFGH, punkt S w środku krawędzi DH"*) — bez podpowiadania odpowiedzi. Wszystkie 5 modeli text-only dostaje dokładnie te same opisy.
+- **Ocena zadań otwartych** wg standardowych kryteriów CKE: pełna metoda + wynik = max pkt, błąd rachunkowy = N-1, istotny postęp = częściowe pkt.
 
 ## Arkusz CKE
 
@@ -88,9 +124,9 @@ Lub bezpośrednio z [CKE](https://cke.gov.pl/egzamin-osmoklasisty/arkusze/).
 
 ## Stack
 
-- **Runtime**: MLX (`mlx-lm` / `mlx-vlm`) — natywne pod Apple Silicon
-- **Sędzia**: Claude Opus 4.7 (1M context, anthropic SDK)
-- **Sprzęt referencyjny**: Apple M5 Max + 128 GB unified memory
+- **Runtime**: MLX (`mlx-lm` / `mlx-vlm`) — natywne pod Apple Silicon.
+- **Sędzia**: Claude Opus 4.7 (1M context, Anthropic SDK).
+- **Sprzęt referencyjny**: Apple Silicon (testowane na M-series).
 
 ## Licencja
 
