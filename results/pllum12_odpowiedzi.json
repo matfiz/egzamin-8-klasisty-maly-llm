@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 0.58,
+    "tokens": 9,
+    "tokens_per_s": 15.6,
+    "raw": "Odpowiedź:\n  B",
+    "odpowiedz": ""
+  },
+  {
+    "id": 2,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 1.59,
+    "tokens": 68,
+    "tokens_per_s": 42.6,
+    "raw": "Największym wspólnym dzielnikiem liczb 18 i 27 jest liczba 9, a najmniejszą wspólną wielokrotnością liczb 2 i 4 jest liczba 4. Zatem kod do szafki Oli to 9944.\n\n#### 9944",
+    "odpowiedz": ""
+  },
+  {
+    "id": 3,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.46,
+    "tokens": 12,
+    "tokens_per_s": 26.1,
+    "raw": "<odpowiedz>B</odpowiedz>",
+    "odpowiedz": "B"
+  },
+  {
+    "id": 4,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.27,
+    "tokens": 2,
+    "tokens_per_s": 7.3,
+    "raw": "C",
+    "odpowiedz": ""
+  },
+  {
+    "id": 5,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 1.68,
+    "tokens": 77,
+    "tokens_per_s": 45.9,
+    "raw": "Za kocura Janek zapłacił 0,6x, a za kotkę 0,8y, więc wyrażenie 0,6x + 0,8y poprawnie opisuje, ile złotych zapłacił Janek za te koty.\n  D. 0,6x + 0,8y",
+    "odpowiedz": ""
+  },
+  {
+    "id": 6,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 1.87,
+    "tokens": 87,
+    "tokens_per_s": 46.5,
+    "raw": "W pudełku pozostały kule ponumerowane liczbami parzystymi, ponieważ suma liczb na dowolnych dwóch kulach, które pozostały w pudełku, jest parzysta.\n\nSuma liczb na pięciu wylosowanych kulach jest równa 36, ponieważ 1 + 2 + 3 + 5 + 11 = 36.\n\n#### 36",
+    "odpowiedz": ""
+  },
+  {
+    "id": 7,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 2.68,
+    "tokens": 131,
+    "tokens_per_s": 48.9,
+    "raw": "W każdym koszyku jest 400/10=<<400/10=40>>40 owoców.\nW każdym koszyku jest 40-6=<<40-6=34>>34 pomarańcze.\nW każdym koszyku jest 40+6=<<40+6=46>>46 jabłek.\nW 10 koszykach jest 46*10=<<46*10=460>>460 jabłek.\n#### 460",
+    "odpowiedz": ""
+  },
+  {
+    "id": 8,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.74,
+    "tokens": 23,
+    "tokens_per_s": 31.3,
+    "raw": "<odpowiedz>AB</odpowiedz>\n<odpowiedz>CD</odpowiedz>",
+    "odpowiedz": "AB"
+  },
+  {
+    "id": 9,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 1.19,
+    "tokens": 51,
+    "tokens_per_s": 42.9,
+    "raw": "Liczba z jest równa 6, ponieważ 4+x+y = 5+x+y+z.\n\nŚrednia arytmetyczna trzech liczb jest o 1 większa od średniej arytmetycznej dwóch liczb.",
+    "odpowiedz": ""
+  },
+  {
+    "id": 10,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.55,
+    "tokens": 15,
+    "tokens_per_s": 27.4,
+    "raw": "<odpowiedz>P1F2</odpowiedz>",
+    "odpowiedz": "P1F2"
+  },
+  {
+    "id": 11,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": false,
+    "czas_s": 0.31,
+    "tokens": 2,
+    "tokens_per_s": 6.5,
+    "raw": "C",
+    "odpowiedz": ""
+  },
+  {
+    "id": 12,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 0.44,
+    "tokens": 3,
+    "tokens_per_s": 6.7,
+    "raw": "F1",
+    "odpowiedz": ""
+  },
+  {
+    "id": 13,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 1.11,
+    "tokens": 42,
+    "tokens_per_s": 37.8,
+    "raw": "Odpowiedź C jest prawidłowa, ponieważ pole kwadratu jest równe 49, a pole trójkąta ADE jest równe 28.",
+    "odpowiedz": ""
+  },
+  {
+    "id": 14,
+    "typ": "zamkniete",
+    "punkty_max": 1,
+    "ma_obrazek": true,
+    "czas_s": 0.4,
+    "tokens": 7,
+    "tokens_per_s": 17.3,
+    "raw": "Odpowiedź C",
+    "odpowiedz": ""
+  },
+  {
+    "id": 15,
+    "typ": "otwarte",
+    "punkty_max": 2,
+    "ma_obrazek": false,
+    "czas_s": 3.13,
+    "tokens": 152,
+    "tokens_per_s": 48.6,
+    "raw": "Niech x będzie liczbą kartek czerwonych.\nWtedy 1,5x kartek niebieskich.\nx+10 kartek zielonych.\nx+37 kartek białych.\nZatem 160 kartek do wykonania origami = x + 1,5x + x + 10 + x + 37.\nZatem 160 = 2,5x + 47.\nZatem x = 60.\nZatem 1,5x kartek niebieskich = 1,5 * 60 = <<1,5*60=90>>90 kartek niebieskich.\n#### 90",
+    "odpowiedz": ""
+  },
+  {
+    "id": 16,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": false,
+    "czas_s": 5.1,
+    "tokens": 257,
+    "tokens_per_s": 50.4,
+    "raw": "Samochód przejechał 48 km w 40 minut, czyli 1 godzinę * 40 minut = <<48*40/60=80>>80 minut.\nPrędkość samochodu na drodze z Polanki do Jodłowa wynosiła 48 km / 80 minut = <<48/80=0,6>>0,6 km/minutę.\nPrędkość samochodu na drodze z Jodłowa do Dębiny wynosiła 123 km - 48 km = <<123-48=75>>75 km.\nCzas przejazdu samochodu z Jodłowa do Dębiny to 75 km / 0,6 km/minutę = <<75/0,6=125>>125 minut.\nWynik końcowy:\n<odpowiedz>Przejazd samochodu z Jodłowa do Dębiny trwał 125 minut, czyli 125/60=<<125/60=2>>2 godziny.</odpowiedz>",
+    "odpowiedz": "Przejazd samochodu z Jodłowa do Dębiny trwał 125 minut, czyli 125/60=<<125/60=2>>2 godziny."
+  },
+  {
+    "id": 17,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": true,
+    "czas_s": 7.69,
+    "tokens": 389,
+    "tokens_per_s": 50.6,
+    "raw": "W turnieju piłki nożnej brało udział 15 dziewcząt i 46 chłopców, czyli łącznie 15 + 46 = <<15+46=61>>61 dzieci.\nW turnieju tańca brało udział 65 dziewcząt i 16 chłopców, czyli łącznie 65 + 16 = <<65+16=81>>81 dzieci.\nW turnieju tenisa stołowego brało udział 34 chłopców i ? dziewcząt, czyli łącznie 34 + ? = <<34+?=>>34 + ? = <<34+?=>>34 + ? dzieci.\nŁączna liczba dziewcząt uczestniczących w Dniu Sportu wynosi 15 + 65 + ? = <<15+65+?=80>>80.\nŁączna liczba chłopców uczestniczących w Dniu Sportu wynosi 46 + 16 + 34 = <<46+16+34=96>>96.\nŁączna liczba dzieci uczestniczących w Dniu Sportu wynosi 80 + 96 = <<80+96=176>>176.\nLiczba dzieci, które brały udział w turnieju tenisa stołowego, wynosi 34 + ? = <<34+?=>>34 + ? dzieci.\nProporcja liczby dzieci, które brały udział w turnieju tenisa stołowego, do liczby wszystkich uczestników Dnia Sportu wynosi (34 + ?) / 176 = <<(34+?)/176=0,20>>0,20.\n#### 0,20",
+    "odpowiedz": ""
+  },
+  {
+    "id": 18,
+    "typ": "otwarte",
+    "punkty_max": 2,
+    "ma_obrazek": true,
+    "czas_s": 3.82,
+    "tokens": 186,
+    "tokens_per_s": 48.7,
+    "raw": "Niech a będzie długością krawędzi sześcianu ABCDEFGH. Wtedy objętość sześcianu wynosi a3. Objętość ostrosłupa ACDS jest równa 1/2*1/3*a3 = a2/6. Stąd objętość ostrosłupa ACDS jest mniejsza od objętości sześcianu ABCDEFGH o a3 - a2/6 = 5/6*a3.\n\nWYNIK KOŃCOWY: \n<odpowiedz>Objętość ostrosłupa ACDS jest mniejsza od objętości sześcianu ABCDEFGH o 5/6*objętość sześcianu ABCDEFGH.</odpowiedz>",
+    "odpowiedz": "Objętość ostrosłupa ACDS jest mniejsza od objętości sześcianu ABCDEFGH o 5/6*objętość sześcianu ABCDEFGH."
+  },
+  {
+    "id": 19,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": false,
+    "czas_s": 4.01,
+    "tokens": 200,
+    "tokens_per_s": 49.8,
+    "raw": "Ogródek pani Anny ma pole powierzchni równe 18 m * 12 m = <<18*12=216>>216 m^2.\nPowierzchnia, którą można obsiać jednym opakowaniem nasion, wynosi 25 m^2 * 23,80 zł = <<25*23,8=595>>595 zł.\nPani Anna musi zapłacić co najmniej 216 m^2 / 25 m^2 = <<216/25=8,64>>8,64 opakowań z nasionami.\nWynosi to 8,64 * 23,80 zł = <<8,64*23,8=206,89>>206,89 zł.\n#### 206,89",
+    "odpowiedz": ""
+  },
+  {
+    "id": 20,
+    "typ": "otwarte",
+    "punkty_max": 3,
+    "ma_obrazek": true,
+    "czas_s": 7.61,
+    "tokens": 382,
+    "tokens_per_s": 50.2,
+    "raw": "Rysunek 1: prostokąt ABCD o wymiarach 3 (krótszy bok) × 9 (dłuższy bok). Wierzchołki: A lewy dolny, B prawy dolny, C prawy górny, D lewy górny. Rysunek 2: równoległobok KLMN (K lewy dolny, L prawy dolny, M prawy górny, N lewy górny). Boki KL i NM są poziome, dłuższe; boki KN i LM są ukośne, krótsze, nachylone pod kątem różnym od 90° (równoległobok nie jest prostokątem). Aby z prostokąta otrzymać taki równoległobok, odcina się trójkąt prostokątny równoramienny przy jednym krótszym boku (obie przyprostokątne równe 3) i dokleja po przeciwnej stronie.\n\nProstokąt ABCD ma obwód 3 + 9 + 9 + 3 = <<3+9+9+3=24>>24.\nAby otrzymać równoległobok KLMN, do prostokąta ABCD doklejono trójkąt prostokątny równoramienny o przyprostokątnych długości 3. Dlatego obwód równoległoboku KLMN jest o 6 większy niż obwód prostokąta ABCD. Stąd obwód równoległoboku KLMN wynosi 24 + 6 = <<24+6=30>>30.\n#### 30",
+    "odpowiedz": ""
+  }
+]

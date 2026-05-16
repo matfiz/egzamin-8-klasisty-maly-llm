@@ -20,7 +20,8 @@ RAPORT = ROOT / "results" / "raport.md"
 MODELE = [
     ("bielik", "Bielik 4.5B v3 (8-bit, text-only)", "Bielik4.5", ROOT / "results" / "bielik_odpowiedzi.json"),
     ("bielik_minitron", "Bielik-Minitron 7B v3 (8-bit, text-only)", "BielikMin", ROOT / "results" / "bielik_minitron_odpowiedzi.json"),
-    ("pllum", "Llama-PLLuM 8B Instruct (8-bit, text-only)", "PLLuM", ROOT / "results" / "pllum_odpowiedzi.json"),
+    ("pllum", "Llama-PLLuM 8B Instruct (8-bit, text-only)", "PLLuM8B", ROOT / "results" / "pllum_odpowiedzi.json"),
+    ("pllum12", "PLLuM 12B Instruct (Q6, text-only)", "PLLuM12B", ROOT / "results" / "pllum12_odpowiedzi.json"),
     ("gemma_text", "Gemma 3 4B IT (4-bit, text-only)", "Gemma3T", ROOT / "results" / "gemma_text_odpowiedzi.json"),
     ("gemma4_text", "Gemma 4 E4B IT (4-bit, text-only)", "Gemma4T", ROOT / "results" / "gemma4_text_odpowiedzi.json"),
     ("gemma4_mm", "Gemma 4 E4B IT (4-bit, multimodal)", "Gemma4MM", ROOT / "results" / "gemma4_mm_odpowiedzi.json"),
@@ -94,7 +95,7 @@ def main() -> None:
     # ===== Raport =====
     raport_md = f"""# Raport — Egzamin Ósmoklasisty z Matematyki, 12 maja 2026
 
-Benchmark sześciu konfiguracji modeli ~4-8B parametrów uruchamianych lokalnie przez MLX na Apple Silicon.
+Benchmark ośmiu konfiguracji modeli ~4-12B parametrów uruchamianych lokalnie przez MLX na Apple Silicon.
 
 ## Wyniki
 
@@ -127,6 +128,7 @@ Format komórek: `odpowiedź (zdobyte_pkt)`. Dla zadań otwartych pole odpowiedz
 - **Bielik 4.5B v3 Instruct** (SpeakLeash): polski LLM ogólnego zastosowania, 8-bit MLX.
 - **Bielik-Minitron 7B v3 Instruct** (SpeakLeash): skompresowana wersja **Bielika-11B-v3.0** (-33% parametrów) przez structured pruning + knowledge distillation z NVIDIA Model Optimizer i NeMo Framework (podejście inspirowane Minitronem). Paper: arxiv.org/abs/2603.11881. 8-bit MLX po konwersji.
 - **Llama-PLLuM 8B Instruct** (CYFRAGOVPL): polski instruction-tuning na Llama 3.1 8B, 8-bit MLX po konwersji.
+- **PLLuM 12B Instruct** (CYFRAGOVPL): natywny dense PLLuM 12B (nie Llama-based, bazuje na Mistral wg tokenizera), MLX Q6 z `lukagra/PLLuM-12B-instruct-Q6-mlx`.
 - **Gemma 3 4B IT** (Google): 4-bit MLX, w dwóch wariantach — multimodalnym (`mlx-vlm`, z obrazkami) i text-only (`mlx-lm`, z opisami).
 - **Gemma 4 E4B IT** (Google): nowsza edycja edge, 4-bit MLX, uruchomiona text-only przez `mlx-vlm` bez przekazywania obrazków.
 """

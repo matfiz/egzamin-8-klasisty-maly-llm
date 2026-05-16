@@ -8,7 +8,8 @@
     "gemma4_mm",
     "bielik",
     "bielik_minitron",
-    "pllum"
+    "pllum",
+    "pllum12"
   ],
   "gemma": {
     "suma": 14,
@@ -43,11 +44,11 @@
     "otw_max": 16
   },
   "bielik": {
-    "suma": 23,
-    "procent": 76.7,
+    "suma": 24,
+    "procent": 80.0,
     "zamk_correct": 12,
     "zamk_total": 14,
-    "otw_pkt": 11,
+    "otw_pkt": 12,
     "otw_max": 16
   },
   "bielik_minitron": {
@@ -59,6 +60,14 @@
     "otw_max": 16
   },
   "pllum": {
+    "suma": 3,
+    "procent": 10.0,
+    "zamk_correct": 1,
+    "zamk_total": 14,
+    "otw_pkt": 2,
+    "otw_max": 16
+  },
+  "pllum12": {
     "suma": 3,
     "procent": 10.0,
     "zamk_correct": 1,
@@ -106,6 +115,11 @@
         "odp": "B",
         "punkty": 0,
         "porownanie": "B vs A"
+      },
+      "pllum12": {
+        "odp": "B",
+        "punkty": 0,
+        "porownanie": "B vs A"
       }
     },
     {
@@ -144,6 +158,11 @@
         "porownanie": "B vs B"
       },
       "pllum": {
+        "odp": "",
+        "punkty": 0,
+        "porownanie": " vs B"
+      },
+      "pllum12": {
         "odp": "",
         "punkty": 0,
         "porownanie": " vs B"
@@ -188,6 +207,11 @@
         "odp": "A",
         "punkty": 0,
         "porownanie": "A vs C"
+      },
+      "pllum12": {
+        "odp": "B",
+        "punkty": 0,
+        "porownanie": "B vs C"
       }
     },
     {
@@ -226,6 +250,11 @@
         "porownanie": "A vs A"
       },
       "pllum": {
+        "odp": "C",
+        "punkty": 0,
+        "porownanie": "C vs A"
+      },
+      "pllum12": {
         "odp": "C",
         "punkty": 0,
         "porownanie": "C vs A"
@@ -270,6 +299,11 @@
         "odp": "",
         "punkty": 0,
         "porownanie": " vs D"
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 0,
+        "porownanie": " vs D"
       }
     },
     {
@@ -311,6 +345,11 @@
         "odp": "B",
         "punkty": 0,
         "porownanie": "B vs AC"
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 0,
+        "porownanie": " vs AC"
       }
     },
     {
@@ -352,6 +391,11 @@
         "odp": "B",
         "punkty": 1,
         "porownanie": "B vs B"
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 0,
+        "porownanie": " vs B"
       }
     },
     {
@@ -393,6 +437,11 @@
         "odp": "A",
         "punkty": 0,
         "porownanie": "A vs BD"
+      },
+      "pllum12": {
+        "odp": "AB",
+        "punkty": 0,
+        "porownanie": "AB vs BD"
       }
     },
     {
@@ -434,6 +483,11 @@
         "odp": "B",
         "punkty": 0,
         "porownanie": "B vs D"
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 0,
+        "porownanie": " vs D"
       }
     },
     {
@@ -475,6 +529,11 @@
         "odp": "",
         "punkty": 0,
         "porownanie": " vs PP"
+      },
+      "pllum12": {
+        "odp": "P1F2",
+        "punkty": 0,
+        "porownanie": "P1F2 vs PP"
       }
     },
     {
@@ -516,6 +575,11 @@
         "odp": "",
         "punkty": 0,
         "porownanie": " vs C"
+      },
+      "pllum12": {
+        "odp": "C",
+        "punkty": 1,
+        "porownanie": "C vs C"
       }
     },
     {
@@ -554,6 +618,11 @@
         "porownanie": "P1P2 vs PP"
       },
       "pllum": {
+        "odp": "",
+        "punkty": 0,
+        "porownanie": " vs PP"
+      },
+      "pllum12": {
         "odp": "",
         "punkty": 0,
         "porownanie": " vs PP"
@@ -598,6 +667,11 @@
         "odp": "C",
         "punkty": 0,
         "porownanie": "C vs D"
+      },
+      "pllum12": {
+        "odp": "C",
+        "punkty": 0,
+        "porownanie": "C vs D"
       }
     },
     {
@@ -639,6 +713,11 @@
         "odp": "",
         "punkty": 0,
         "porownanie": " vs A"
+      },
+      "pllum12": {
+        "odp": "C",
+        "punkty": 0,
+        "porownanie": "C vs A"
       }
     },
     {
@@ -649,37 +728,42 @@
       "gemma": {
         "odp": "Ela przygotowała 57 kartek niebieskich.",
         "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie ustawił równanie 3,5c = 133, ale popełnił błąd rachunkowy przy dzieleniu (133/3,5 = 38, a nie 37). Następnie metodą prób i błędów znalazł poprawną wartość c=38 i wynik n=57, jednak rozwiązanie zawiera istotny błąd rachunkowy w głównym toku, a poprawny wynik uzyskano przez zgadywanie, a nie przez konsekwentne rozwiązanie równania."
+        "uzasadnienie": "Uczeń poprawnie ustawił równanie i metodę, ale popełnił błąd rachunkowy przy dzieleniu 133/3,5, otrzymując 37 zamiast 38. Następnie metodą prób i błędów (zgadywania) doszedł do poprawnego wyniku 57, jednak właściwe rozwiązanie algebraiczne zawiera błąd rachunkowy, więc przyznaję 1 punkt."
       },
       "gemma_text": {
         "odp": "Ela przygotowała 57 kartek niebieskich.",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie ułożył równanie, prawidłowo je rozwiązał i otrzymał właściwy wynik 57 kartek niebieskich. Rozwiązanie jest kompletne i zawiera sprawdzenie."
+        "uzasadnienie": "Uczeń poprawnie ułożył równanie, prawidłowo wykonał obliczenia i otrzymał właściwy wynik 57 kartek niebieskich. Rozwiązanie zawiera pełną metodę i sprawdzenie."
       },
       "gemma4_text": {
         "odp": "Ela przygotowała 57 kartek niebieskich.",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie ułożył równanie, rozwiązał je i otrzymał prawidłowy wynik 57 kartek niebieskich. Rozwiązanie zawiera pełną metodę, obliczenia i sprawdzenie."
+        "uzasadnienie": "Uczeń poprawnie ułożył równanie, prawidłowo je rozwiązał i otrzymał właściwy wynik 57 kartek niebieskich. Obliczenia są kompletne i zweryfikowane sprawdzeniem."
       },
       "gemma4_mm": {
         "odp": "Ela przygotowała 57 kartek niebieskich.",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie ułożył równanie, prawidłowo je rozwiązał i otrzymał właściwy wynik 57 kartek niebieskich. Rozwiązanie zawiera pełną metodę, obliczenia oraz sprawdzenie."
+        "uzasadnienie": "Uczeń poprawnie ułożył równanie, rozwiązał je i otrzymał prawidłowy wynik 57 kartek niebieskich. Rozwiązanie zawiera pełną metodę, obliczenia i sprawdzenie."
       },
       "bielik": {
         "odp": "",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie ułożył równanie i otrzymał prawidłowy wynik 57 kartek niebieskich. Pojawił się błąd rachunkowy (37-10=26 zamiast 27, co dało 134 zamiast 133 i niecałkowite r), ale uczeń zweryfikował, że r=38 spełnia warunki zadania i otrzymał poprawną odpowiedź. Metoda i wynik są poprawne."
+        "uzasadnienie": "Uczeń poprawnie ułożył równanie i otrzymał właściwy wynik 57 kartek niebieskich. Pojawił się drobny błąd rachunkowy (26 zamiast 27, co dało 134 zamiast 133 i niecałkowite r), ale uczeń zweryfikował, że r=38 spełnia warunki zadania i podał poprawną odpowiedź. Metoda i wynik są prawidłowe."
       },
       "bielik_minitron": {
         "odp": "Ela przygotowała 57 kartek niebieskich.",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie ułożył równanie, prawidłowo je rozwiązał i obliczył liczbę kartek niebieskich (57). Rozwiązanie zawiera pełną metodę, obliczenia i sprawdzenie."
+        "uzasadnienie": "Uczeń poprawnie ułożył równanie, prawidłowo je rozwiązał i obliczył liczbę kartek niebieskich (57). Rozwiązanie zawiera pełną metodę, poprawny wynik oraz sprawdzenie."
       },
       "pllum": {
         "odp": "Ela przygotowała 168,5 kartek niebieskich.",
         "punkty": 0,
-        "uzasadnienie": "Uczeń zastosował błędną metodę - nie uwzględnił, że kartki niebieskie i zielone również wchodzą w skład 160 kartek. Nie ułożył poprawnego równania uwzględniającego wszystkie zależności między kolorami, a otrzymany wynik (168,5) jest niepoprawny i nielogiczny (większy niż łączna liczba kartek)."
+        "uzasadnienie": "Uczeń zastosował błędną metodę – nie uwzględnił, że kartki niebieskie również wchodzą w skład 160 sztuk, i potraktował '10 mniej' jako liczbę zielonych zamiast jako różnicę względem czerwonych. W efekcie otrzymał bezsensowny wynik (168,5 kartki), który dodatkowo przekracza liczbę wszystkich kartek."
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 0,
+        "uzasadnienie": "Uczeń błędnie zapisał warunki zadania: zielonych miało być o 10 mniej niż czerwonych (c-10), a białych jest 37 (a nie x+37). Doprowadziło to do błędnego równania i błędnego wyniku 90 zamiast 57. Metoda jest zatem niepoprawna."
       }
     },
     {
@@ -690,37 +774,42 @@
       "gemma": {
         "odp": "",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (62,5 min), prawidłowo uzasadniając, że jest to dłużej niż godzina. Rozwiązanie jest kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (62,5 min), prawidłowo uzasadniając, że jest to więcej niż godzina. Rozwiązanie jest kompletne i poprawne."
       },
       "gemma_text": {
         "odp": "",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu jako 25/24 godziny. Poprawnie zamienił to na 1 godzinę i 2,5 minuty, co wystarcza do uzasadnienia tezy. Jednak w końcowym podsumowaniu popełnił błąd, zapisując mylnie '82,5 minuty' i '1 godzina i 22,5 minuty', co jest sprzeczne z wcześniejszymi poprawnymi obliczeniami. Mimo błędu w końcowym zapisie, teza została uzasadniona — odejmuję 1 punkt za błąd w finalnym etapie."
+        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas jako 25/24 godziny. Popełnił jednak błąd przy zamianie na minuty - 25/24 h to 62,5 min, a nie 82,5 min, choć wniosek (czas > 1 h) jest poprawny. Błąd rachunkowy w końcowym etapie uzasadnia obniżenie o 1 punkt."
       },
       "gemma4_text": {
         "odp": "Prędkość samochodu wynosi 72 km/h. Droga z Jodłowa do Dębiny ma długość 75 km. Czas przejazdu wynosi $t = \\frac{75}{72} = \\frac{25}{24}$ godziny. Ponieważ $\\frac{25}{24} > 1$, przejazd z Jodłowa do Dębiny trwał dłużej niż godzina (dokładnie 1 godzina i 2,5 godziny).",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (62,5 min = 25/24 h), prawidłowo uzasadniając, że jest to dłużej niż godzina. Drobna pomyłka w finalnym zdaniu ('1 godzina i 2,5 godziny') jest oczywistą literówką i nie wpływa na poprawność rozwiązania."
+        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (62,5 min = 25/24 h) i prawidłowo uzasadnił, że jest to dłużej niż godzina. Drobna pomyłka w zdaniu końcowym ('1 godzina i 2,5 godziny') jest oczywistą literówką i nie wpływa na poprawność rozwiązania."
       },
       "gemma4_mm": {
         "odp": "Prędkość samochodu wynosi 72 km/h. Droga z Jodłowa do Dębiny ma długość 75 km. Czas przejazdu wynosi $t = \\frac{75}{72} = \\frac{25}{24}$ godziny. Ponieważ $\\frac{25}{24} > 1$, przejazd z Jodłowa do Dębiny trwał dłużej niż godzina (dokładnie 1 godzina i 2,5 godziny).",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (25/24 h = 62,5 min). Uzasadnienie, że czas jest dłuższy niż godzina, jest pełne i poprawne. Drobna pomyłka w zdaniu końcowym ('1 godzina i 2,5 godziny') jest oczywistą literówką i nie wpływa na ocenę."
+        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (62,5 min = 25/24 h) i prawidłowo uzasadnił, że jest to dłużej niż godzina. Drobna pomyłka w słowach końcowej odpowiedzi ('1 godzina i 2,5 godziny') nie wpływa na merytoryczną poprawność rozwiązania."
       },
       "bielik": {
         "odp": "",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (75/72 h ≈ 1,0417 h), co jest dłużej niż godzina. Metoda i wynik są poprawne, uzasadnienie kompletne."
+        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (75/72 h ≈ 1,0417 h), co jest większe niż 1 godzina. Metoda i wynik są prawidłowe, uzasadnienie kompletne."
       },
       "bielik_minitron": {
         "odp": "Przejazd samochodu z Jodłowa do Dębiny trwał dłużej niż godzinę, ponieważ wynosił około 1 godziny i 3 minut.",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi Jodłowo-Dębina (75 km) oraz czas przejazdu (75/72 h ≈ 1 godz. 2,5 min = 62,5 min). Wniosek, że czas jest dłuższy niż godzina, jest poprawnie uzasadniony. Rozwiązanie kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie obliczył prędkość (72 km/h), długość drogi (75 km) oraz czas przejazdu (75/72 h ≈ 1 h 2,5 min). Wniosek, że czas jest dłuższy niż godzina, jest prawidłowy i uzasadniony obliczeniami."
       },
       "pllum": {
         "odp": "Przejazd z Jodłowa do Dębiny trwa dłużej niż godzina.",
         "punkty": 1,
-        "uzasadnienie": "Uczeń przyjął poprawną metodę (obliczenie prędkości, drogi Jodłowo-Dębina i czasu przejazdu), ale popełnił błąd jednostkowy/rachunkowy przy obliczaniu prędkości — zamiast 72 km/h otrzymał 1,2 km/h (pomylił jednostki, nie zamienił 40 min na godziny). W konsekwencji końcowy wynik 62,5 godziny i 3750 minut jest błędny, choć liczba 62,5 przypadkiem zgadza się z prawidłowym wynikiem w minutach. Uzasadnienie jest więc niepoprawne."
+        "uzasadnienie": "Uczeń przyjął poprawną metodę (obliczenie prędkości, długości drogi i czasu), ale popełnił błąd jednostkowy/rachunkowy: prędkość wyliczył jako 48/40 = 1,2 km/h zamiast 72 km/h (nie zamienił minut na godziny). W konsekwencji błędny jest wynik czasu przejazdu (62,5 h zamiast 62,5 min) i błędna interpretacja końcowa. Mimo to widoczny jest istotny postęp w rozwiązaniu."
+      },
+      "pllum12": {
+        "odp": "Przejazd samochodu z Jodłowa do Dębiny trwał 125 minut, czyli 125/60=<<125/60=2>>2 godziny.",
+        "punkty": 1,
+        "uzasadnienie": "Uczeń przyjął poprawną metodę (obliczenie prędkości i czasu na drugim odcinku) oraz poprawnie obliczył długość drogi Jodłowo-Dębina (75 km). Jednak popełnił błąd już na początku: 40 minut zamienił błędnie na 80 minut, co doprowadziło do błędnej prędkości (0,6 km/min zamiast 1,2 km/min) i błędnego czasu (125 min zamiast 62,5 min). Mimo błędnego wyniku, wniosek o czasie dłuższym niż godzina pozostaje, ale uzasadnienie liczbowe jest niepoprawne."
       }
     },
     {
@@ -731,37 +820,42 @@
       "gemma": {
         "odp": "Liczba procentów wszystkich uczestników Dnia Sportu, jaki stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego, wynosi około 19.23%.",
         "punkty": 0,
-        "uzasadnienie": "Uczeń pominął kluczową informację, że dziewcząt było o 8 więcej niż chłopców, i nie obliczył brakującej liczby dziewcząt w turnieju tenisa stołowego. W efekcie błędnie przyjął łączną liczbę dziewcząt (80 zamiast 104) oraz liczbę uczestników tenisa (34 zamiast 58), co dało błędny wynik 19,23% zamiast 29%. Brak istotnego postępu w prawidłowym modelu zadania."
+        "uzasadnienie": "Uczeń pominął kluczową informację, że dziewcząt było o 8 więcej niż chłopców, i nie obliczył liczby dziewcząt w turnieju tenisa stołowego. W efekcie błędnie przyjął liczbę uczestników tenisa stołowego (34 zamiast 58) oraz błędną całkowitą liczbę uczestników (176 zamiast 200), co dało zły wynik. Brak istotnego postępu w prawidłowej metodzie."
       },
       "gemma_text": {
         "odp": "Procent liczby wszystkich uczestników Dnia Sportu, jaki stanowi liczba dzieci, które brały udział w turnieju tenisa stołowego, wynosi 12%.",
         "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie ustalił liczbę dziewcząt w tenisie stołowym (24) oraz łączną liczbę uczestników (200), co stanowi istotny postęp. Jednak w końcowym etapie obliczył procent tylko dla dziewcząt (24/200 = 12%) zamiast wszystkich uczestników tenisa stołowego (24+34=58), co dało błędny wynik 12% zamiast 29%."
+        "uzasadnienie": "Uczeń poprawnie ustalił model matematyczny i obliczył liczbę dziewcząt w tenisie stołowym (24) oraz łączną liczbę uczestników (200). Jednak w końcowym etapie uwzględnił tylko dziewczęta (24) zamiast wszystkich dzieci grających w tenisa stołowego (24+34=58), co dało błędny wynik 12% zamiast 29%. Jest to istotny postęp, ale z błędem zasadniczym w końcowym etapie."
       },
       "gemma4_text": {
         "odp": "Liczba dzieci, które brały udział w turnieju tenisa stołowego, stanowi 29% wszystkich uczestników Dnia Sportu.",
         "punkty": 3,
-        "uzasadnienie": "Rozwiązanie jest kompletne i poprawne. Uczeń prawidłowo obliczył liczbę chłopców (96), dziewcząt (104), liczbę dziewcząt w turnieju tenisa (24), łączną liczbę uczestników tenisa (58) oraz wynik końcowy 29%."
+        "uzasadnienie": "Uczeń poprawnie obliczył łączną liczbę chłopców (96), dziewcząt (104), liczbę dziewcząt w turnieju tenisa stołowego (24), łączną liczbę uczestników tenisa stołowego (58) oraz całkowitą liczbę uczestników (200). Końcowy wynik 29% jest prawidłowy, a wszystkie etapy rozwiązania są kompletne i poprawne."
       },
       "gemma4_mm": {
         "odp": "",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył łączną liczbę chłopców (96), wykorzystał warunek różnicy do wyznaczenia liczby dziewcząt w tenisie stołowym (24), obliczył łączną liczbę uczestników (200) oraz uczestników tenisa stołowego (58), a następnie poprawnie wyznaczył procent (29%). Rozwiązanie jest kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie wyznaczył łączną liczbę chłopców (96), dziewcząt (104), liczbę dziewcząt grających w tenisa stołowego (24), łączną liczbę uczestników tenisa (58) oraz wszystkich uczestników (200). Końcowy wynik 29% jest prawidłowy, a metoda kompletna i poprawnie uzasadniona."
       },
       "bielik": {
         "odp": "",
-        "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie ustalił model matematyczny i obliczył liczbę dziewcząt na turnieju tenisa stołowego (24) oraz łączną liczbę uczestników (200). Jednak w ostatnim kroku zapomniał dodać 34 chłopców do 24 dziewcząt grających w tenisa stołowego, przez co otrzymał błędny wynik 12% zamiast 29%. Jest to istotny postęp, ale błąd w końcowym etapie."
+        "punkty": 2,
+        "uzasadnienie": "Uczeń poprawnie ustalił liczbę dziewcząt na tenisie stołowym (24) oraz łączną liczbę uczestników (200), jednak w ostatnim etapie pominął chłopców z turnieju tenisa stołowego — powinno być 24+34=58 osób. Błąd w jednym etapie przy w istocie poprawnej metodzie kwalifikuje rozwiązanie na 2 punkty."
       },
       "bielik_minitron": {
         "odp": "Liczba dzieci, które brały udział w turnieju tenisa stołowego, stanowi 29% liczby wszystkich uczestników Dnia Sportu.",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie wykonał wszystkie etapy: obliczył liczbę chłopców (96), wyznaczył liczbę dziewcząt na tenisie stołowym (24), obliczył łączną liczbę uczestników turnieju tenisa stołowego (58) oraz wszystkich uczestników (200) i prawidłowo obliczył procent (29%). Rozwiązanie jest kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie wyznaczył liczbę chłopców (96), dziewcząt (104), liczbę dziewcząt grających w tenisa stołowego (24), łączną liczbę uczestników tenisa (58) oraz prawidłowo obliczył procent (29%). Rozwiązanie jest kompletne i poprawne."
       },
       "pllum": {
         "odp": "61,8%",
         "punkty": 0,
-        "uzasadnienie": "Uczeń błędnie zinterpretował zadanie - dodał liczby z różnych turniejów zamiast obliczyć liczbę dziewcząt w tenisie stołowym. Nie wykorzystał informacji o tym, że dziewcząt było o 8 więcej niż chłopców. Metoda jest całkowicie błędna, a wynik nieprawidłowy."
+        "uzasadnienie": "Uczeń błędnie zinterpretował zadanie - dodał liczby z różnych turniejów zamiast obliczyć liczbę dziewcząt w turnieju tenisa stołowego. Nie wykorzystał informacji o tym, że dziewcząt było o 8 więcej niż chłopców. Zarówno metoda, jak i wynik są błędne."
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 1,
+        "uzasadnienie": "Uczeń poprawnie obliczył łączną liczbę chłopców (96), ale nie wykorzystał kluczowej informacji, że dziewcząt jest o 8 więcej niż chłopców. Zamiast tego przyjął błędnie, że dziewcząt jest 80 (pomijając niewiadomą), co doprowadziło do błędnych dalszych obliczeń i wyniku 0,20 zamiast 29%. Widoczny jest częściowy postęp, ale model matematyczny jest niepełny."
       }
     },
     {
@@ -772,37 +866,42 @@
       "gemma": {
         "odp": "Objętość ostrosłupa ACDS jest mniejsza od objętości sześcianu ABCDEFGH o współczynniku 0.5.",
         "punkty": 0,
-        "uzasadnienie": "Uczeń błędnie wyznaczył wysokość ostrosłupa (przyjął a zamiast a/2) oraz nieprawidłowo zastosował wzór na objętość ostrosłupa (pominął czynnik 1/3). Otrzymany wynik 0,5 jest błędny — prawidłowa odpowiedź to 12 razy. Metoda jest niepoprawna."
+        "uzasadnienie": "Uczeń błędnie wyznaczył wysokość ostrosłupa (przyjął a zamiast a/2) oraz błędnie obliczył objętość jako pole podstawy razy wysokość bez dzielenia przez 3. Otrzymany wynik (0,5) jest nieprawidłowy, a metoda zawiera istotne błędy merytoryczne."
       },
       "gemma_text": {
         "odp": "Objętość ostrosłupa ACDS jest równa objętości sześcianu ABCDEFGH.  Obliczenia:\nV_sześcianu = a³\nV_ostrosłupa = (1/2) * a³\nWspółczynnik = V_sześcianu / V_ostrosłupa = 1",
         "punkty": 0,
-        "uzasadnienie": "Uczeń błędnie założył, że objętość ostrosłupa to połowa objętości sześcianu, co jest nieprawdą. Nie zastosował poprawnie wzoru na objętość ostrosłupa (nie pomnożył przez 1/3 i nie wykorzystał wysokości DS=a/2). Końcowy wynik (współczynnik 1) jest błędny — poprawna odpowiedź to 12."
+        "uzasadnienie": "Uczeń poprawnie obliczył objętość sześcianu i pole podstawy ostrosłupa, a nawet zauważył, że DS=a/2, ale następnie bez uzasadnienia przyjął błędną objętość ostrosłupa V=a³/2 i otrzymał błędny wynik (współczynnik 1 zamiast 12). Metoda nie została doprowadzona do końca poprawnie."
       },
       "gemma4_text": {
         "odp": "",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole podstawy ACD = a²/2, wysokość ostrosłupa = a/2, objętość ostrosłupa = a³/12 oraz stosunek objętości równy 12. Metoda (układ współrzędnych) jest poprawna, a wynik zgodny z kluczem."
+        "uzasadnienie": "Uczeń poprawnie obliczył pole podstawy ACD = a²/2, wysokość ostrosłupa = a/2 oraz objętość ostrosłupa = a³/12. Prawidłowo wyznaczył stosunek objętości równy 12. Metoda i wynik są poprawne."
       },
       "gemma4_mm": {
         "odp": "",
         "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole podstawy trójkąta ACD = a²/2 oraz prawidłowo ustalił, że S = (0,0,a/2), co implikuje wysokość a/2. Jednak rozwiązanie zostało urwane - uczeń nie dokończył obliczeń objętości ostrosłupa, nie obliczył stosunku objętości ani nie podał wyniku końcowego (12 razy mniejsza). Brak wyniku końcowego uniemożliwia przyznanie pełnej liczby punktów."
+        "uzasadnienie": "Uczeń poprawnie obliczył pole podstawy (a²/2) i zaczął wyznaczać wysokość ostrosłupa, ustalając położenie S=(0,0,a/2), jednak rozwiązanie zostało urwane - brak końcowego obliczenia objętości ostrosłupa, brak porównania objętości i brak końcowego wyniku (12 razy). Jest istotny postęp i poprawna metoda, ale brak wyniku końcowego."
       },
       "bielik": {
         "odp": "",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie obliczył objętość sześcianu (a³) oraz ostrosłupa (a³/12), prawidłowo identyfikując pole podstawy i wysokość. Otrzymał poprawny wynik: objętość ostrosłupa jest 12 razy mniejsza od objętości sześcianu."
+        "uzasadnienie": "Uczeń poprawnie obliczył objętość sześcianu (a³) oraz objętość ostrosłupa (a³/12), prawidłowo wyznaczając pole podstawy i wysokość. Stosunek objętości został poprawnie wyliczony jako 12. Rozwiązanie jest kompletne i poprawne."
       },
       "bielik_minitron": {
         "odp": "Objętość ostrosłupa ACDS jest 12 razy mniejsza od objętości sześcianu ABCDEFGH.",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole podstawy (a²/2), wysokość ostrosłupa (a/2) oraz objętość ostrosłupa (a³/12). Prawidłowo porównał objętości i otrzymał wynik 12. Rozwiązanie kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie wyznaczył pole podstawy (a²/2), wysokość ostrosłupa (a/2), obliczył objętość ostrosłupa (a³/12) oraz porównał ją z objętością sześcianu, otrzymując poprawny wynik 12. Rozwiązanie jest kompletne i poprawnie uzasadnione."
       },
       "pllum": {
         "odp": "Ostrosłup ACDS jest 1/3 razy mniejszy objętościowo od sześcianu ABCDEFGH.",
         "punkty": 0,
-        "uzasadnienie": "Uczeń zastosował błędną metodę — powołał się na nieistniejącą regułę o ostrosłupie prawidłowym z kątem 60° między ścianami i bezpodstawnie przyjął, że objętość ostrosłupa to 1/3 objętości sześcianu. Wynik (a³/3, 3 razy mniejsza) jest błędny — poprawnie powinno być 12 razy mniejsza."
+        "uzasadnienie": "Uczeń nie zastosował poprawnej metody – nie obliczył pola podstawy ACD ani wysokości ostrosłupa, lecz powołał się na nieistniejącą regułę o ostrosłupie prawidłowym i kącie 60°. Otrzymany wynik (1/3) jest błędny – poprawna odpowiedź to 12 razy mniejsza."
+      },
+      "pllum12": {
+        "odp": "Objętość ostrosłupa ACDS jest mniejsza od objętości sześcianu ABCDEFGH o 5/6*objętość sześcianu ABCDEFGH.",
+        "punkty": 0,
+        "uzasadnienie": "Uczeń błędnie obliczył objętość ostrosłupa (a²/6 zamiast a³/12), nie wskazał poprawnie pola podstawy ani wysokości. Ponadto pytanie dotyczyło, ile RAZY objętość jest mniejsza, a uczeń odpowiedział o ile mniejsza. Metoda i wynik są błędne."
       }
     },
     {
@@ -813,7 +912,7 @@
       "gemma": {
         "odp": "Pani Anna musi zapłacić 138,80 zł za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całej powierzchni tego ogródka.",
         "punkty": 2,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²) oraz prawidłowo wyznaczył liczbę potrzebnych opakowań (6). Popełnił jednak błąd rachunkowy w ostatnim etapie: 6·23,80 = 142,80 zł, a nie 138,80 zł. Zgodnie z kryteriami przyznaję 2 punkty."
+        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²) i prawidłowo ustalił liczbę potrzebnych opakowań (6). Popełnił jednak błąd rachunkowy w ostatnim etapie: 6 · 23,80 zł = 142,80 zł, a nie 138,80 zł. Zgodnie z kryteriami za błąd w jednym etapie przy poprawnej metodzie przyznaje się 2 punkty."
       },
       "gemma_text": {
         "odp": "Pani Anna musi zapłacić 142,80 zł za najmniejszą liczbę opakowań z nasion potrzebnych na obsianie całej powierzchni ogródka.",
@@ -823,27 +922,32 @@
       "gemma4_text": {
         "odp": "Pani Anna musi zapłacić 142,80 zł za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całego ogródka.",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył liczbę potrzebnych opakowań (5,4 → 6) i obliczył końcowy koszt 142,80 zł. Rozwiązanie jest kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył minimalną liczbę opakowań (6) zaokrąglając w górę oraz obliczył końcowy koszt 142,80 zł. Rozwiązanie jest kompletne, metodycznie poprawne i zgodne z kluczem."
       },
       "gemma4_mm": {
         "odp": "Pani Anna musi zapłacić 142,80 zł za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całego ogródka.",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył liczbę potrzebnych opakowań (5,4 → 6) oraz koszt całkowity (142,80 zł). Rozwiązanie jest kompletne, poprawne metodologicznie i rachunkowo."
+        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył liczbę potrzebnych opakowań (5,4 → 6) oraz koszt końcowy (142,80 zł). Rozwiązanie jest kompletne, metoda i wynik zgodne z kluczem."
       },
       "bielik": {
         "odp": "",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył liczbę opakowań z zaokrągleniem w górę (6) oraz obliczył koszt całkowity (142,80 zł). Rozwiązanie jest kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył liczbę potrzebnych opakowań (zaokrąglając 5,4 w górę do 6) oraz obliczył całkowity koszt 142,80 zł. Rozwiązanie jest kompletne i poprawne."
       },
       "bielik_minitron": {
         "odp": "Pani Anna musi zapłacić 142,80 zł za najmniejszą liczbę opakowań z nasionami potrzebnych na obsianie całej powierzchni ogródka.",
         "punkty": 3,
-        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył minimalną liczbę opakowań (6) zaokrąglając w górę oraz obliczył końcowy koszt (142,80 zł). Rozwiązanie jest kompletne i poprawne."
+        "uzasadnienie": "Uczeń poprawnie obliczył pole trapezu (135 m²), prawidłowo wyznaczył minimalną liczbę opakowań (6) poprzez zaokrąglenie w górę oraz obliczył końcowy koszt 142,80 zł. Rozwiązanie jest kompletne i poprawne."
       },
       "pllum": {
         "odp": "",
         "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie zastosował wzór na pole trapezu (½·30·9), ale popełnił błąd rachunkowy otrzymując 13,5 m² zamiast 135 m². W konsekwencji błędnie obliczył liczbę opakowań (nie zaokrąglił w górę do liczby całkowitej) i otrzymał błędny koszt. Poprawny jest tylko model matematyczny — istotny postęp zasługuje na 1 punkt."
+        "uzasadnienie": "Uczeń poprawnie zastosował wzór na pole trapezu, ale popełnił błąd rachunkowy: 0,5·30·9 = 135, a nie 13,5. W konsekwencji błędnie obliczył liczbę opakowań (nie zaokrąglił w górę do liczby całkowitej) i końcowy koszt. Istotny postęp jest, ale wynik końcowy oraz kluczowy etap zaokrąglenia liczby opakowań są błędne."
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 0,
+        "uzasadnienie": "Uczeń błędnie obliczył pole trapezu jako iloczyn podstaw (18·12), zamiast zastosować wzór na pole trapezu. W efekcie wszystkie dalsze obliczenia są błędne, a ponadto uczeń nie zaokrąglił liczby opakowań w górę do liczby całkowitej. Brak istotnego postępu w rozwiązaniu."
       }
     },
     {
@@ -854,37 +958,42 @@
       "gemma": {
         "odp": "",
         "punkty": 0,
-        "uzasadnienie": "Rozwiązanie ucznia nie zawiera poprawnej analizy figury — uczeń błędnie identyfikuje boki równoległoboku (twierdzi, że KL=9 i MN=3, co jest niemożliwe w równoległoboku), nie wykorzystuje informacji o trapezie i trójkącie prostokątnym równoramiennym, nie oblicza obwodu i kończy pracę zapętloną, powtarzającą się frazą bez wyniku. Brak istotnego postępu."
+        "uzasadnienie": "Rozwiązanie ucznia jest błędne i niedokończone. Uczeń źle zinterpretował figurę (twierdzi, że CD=3, podczas gdy CD=9), nie zidentyfikował poprawnie trójkąta równoramiennego o przyprostokątnych 3 i 3, nie obliczył przekątnej 3√2, nie podał obwodu. Tekst zapętla się w powtarzającym zdaniu bez konkluzji."
       },
       "gemma_text": {
         "odp": "Obwód równoległoboku KLMN wynosi 12 + 6√2.",
         "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie zidentyfikował, że trójkąt jest prostokątny równoramienny o przyprostokątnych 3 i przeciwprostokątnej 3√2, oraz obliczył drugą podstawę trapezu jako 6. Jednak błędnie określił boki równoległoboku — przyjął KL=3 i MN=9, podczas gdy oba dłuższe boki równoległoboku mają długość 9, a krótsze 3√2. W konsekwencji otrzymał błędny wynik 12+6√2 zamiast 18+6√2."
+        "uzasadnienie": "Uczeń poprawnie zidentyfikował trójkąt prostokątny równoramienny o przyprostokątnych 3 i przeciwprostokątnej 3√2 oraz obliczył drugą podstawę trapezu jako 6. Jednak błędnie określił boki równoległoboku - przyjął KL=3 i MN=9 zamiast obu dłuższych boków równych 9. W rezultacie otrzymał błędny obwód 12+6√2 zamiast 18+6√2."
       },
       "gemma4_text": {
         "odp": "",
         "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie zidentyfikował, że trójkąt prostokątny równoramienny ma przyprostokątne długości 3 i obliczył przeciwprostokątną jako 3√2. Jednak rozwiązanie jest urwane — nie został podany ostateczny obwód równoległoboku, a ponadto uczeń błędnie przyjął, że długie boki równoległoboku mają długość 9 (powinno być 9, co akurat się zgadza), ale nie dokończył obliczeń. Jest istotny postęp, ale brak wyniku końcowego."
+        "uzasadnienie": "Uczeń poprawnie zidentyfikował, że trójkąt prostokątny równoramienny ma przyprostokątne równe 3 oraz rozpoczął obliczanie przeciwprostokątnej (3√2), a także rozpoznał, że dłuższe boki równoległoboku mają długość 9. Jednak rozwiązanie urywa się przed podaniem ostatecznego wyniku — brak obliczenia obwodu. Jest istotny postęp, ale rozwiązanie jest niedokończone."
       },
       "gemma4_mm": {
         "odp": "Obwód równoległoboku KLMN wynosi 24 jednostki długości.",
         "punkty": 0,
-        "uzasadnienie": "Uczeń nie przeanalizował sposobu rozcięcia prostokąta i błędnie założył, że obwód równoległoboku jest równy obwodowi prostokąta. Poprawny wynik to 18 + 6√2, a nie 24. Brak istotnego postępu w rozwiązaniu."
+        "uzasadnienie": "Uczeń nie przeprowadził żadnej analizy geometrycznej rozcięcia prostokąta i błędnie założył, że obwód równoległoboku jest równy obwodowi prostokąta. Poprawny wynik to 18 + 6√2, a nie 24. Brak istotnego postępu w rozwiązaniu."
       },
       "bielik": {
         "odp": "",
         "punkty": 0,
-        "uzasadnienie": "Uczeń błędnie zidentyfikował kształt powstały po przecięciu prostokąta — założył, że boki równoległoboku mają długości 9 i 3, co prowadzi do błędnej odpowiedzi 24. Nie uwzględnił, że przy przesunięciu trójkąta prostokątnego równoramiennego o przyprostokątnych 3 powstaje równoległobok o bokach 9 i 3√2. Brak istotnego postępu w prawidłowym modelu matematycznym."
+        "uzasadnienie": "Uczeń błędnie zidentyfikował wymiary figur powstałych po rozcięciu prostokąta - przyjął, że boki równoległoboku są równe bokom prostokąta (9 i 3), co jest niezgodne z konstrukcją. Nie rozpoznał, że krótszy bok równoległoboku to przeciwprostokątna 3√2. Wynik 24 jest błędny, brak istotnego postępu w prawidłowej metodzie."
       },
       "bielik_minitron": {
         "odp": "Obwód równoległoboku KLMN wynosi \\(12 + 6\\sqrt{2}\\) jednostek.",
         "punkty": 1,
-        "uzasadnienie": "Uczeń poprawnie zidentyfikował trójkąt prostokątny równoramienny o przyprostokątnych 3 i przeciwprostokątnej 3√2, ale błędnie wyznaczył boki równoległoboku — przyjął, że krótsze boki mają długości 9 i 3, podczas gdy w rzeczywistości oba dłuższe boki równoległoboku mają długość 9, a krótsze 3√2. W efekcie otrzymał błędny wynik 12+6√2 zamiast 18+6√2. Istotny postęp (poprawny model trójkąta), ale błąd w konstrukcji równoległoboku."
+        "uzasadnienie": "Uczeń poprawnie zidentyfikował trójkąt prostokątny równoramienny o przyprostokątnych 3 i przeciwprostokątnej 3√2, ale błędnie określił boki równoległoboku — przyjął, że boki dłuższe mają długości 9 i 3, podczas gdy oba dłuższe boki powinny mieć długość 9. W efekcie otrzymał błędny wynik 12 + 6√2 zamiast 18 + 6√2. Jest istotny postęp (poprawna analiza trójkąta), ale błąd w modelu równoległoboku."
       },
       "pllum": {
         "odp": "Obwód równoległoboku KLMN wynosi 36.",
         "punkty": 0,
-        "uzasadnienie": "Uczeń błędnie wyznaczył długości boków równoległoboku - nie rozpoznał, że boki mają długości 9 oraz 3√2. Metoda jest błędna, a wynik 36 niepoprawny."
+        "uzasadnienie": "Uczeń błędnie określił długości boków równoległoboku, nie uwzględniając przeciwprostokątnej trójkąta (3√2). Metoda jest błędna — boki równoległoboku to 9 i 3√2, a nie 6 i 12. Brak istotnego postępu."
+      },
+      "pllum12": {
+        "odp": "",
+        "punkty": 0,
+        "uzasadnienie": "Uczeń błędnie zinterpretował konstrukcję — założył, że trójkąt jest doklejany do prostokąta, podczas gdy w zadaniu prostokąt jest rozcinany na dwie części, z których składa się równoległobok (pole pozostaje 27). Wynik 30 jest błędny (poprawny to 18+6√2), brak istotnego postępu w prawidłowej metodzie."
       }
     }
   ]

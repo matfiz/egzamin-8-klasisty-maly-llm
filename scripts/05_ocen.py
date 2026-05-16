@@ -37,6 +37,7 @@ MODELE: list[tuple[str, Path]] = [
     ("bielik", ROOT / "results" / "bielik_odpowiedzi.json"),
     ("bielik_minitron", ROOT / "results" / "bielik_minitron_odpowiedzi.json"),
     ("pllum", ROOT / "results" / "pllum_odpowiedzi.json"),
+    ("pllum12", ROOT / "results" / "pllum12_odpowiedzi.json"),
 ]
 
 SEDZIA = "claude-opus-4-7"

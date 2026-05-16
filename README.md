@@ -16,6 +16,7 @@ Sprawdzam to na oficjalnym arkuszu CKE z 12 maja 2026 (20 zadań, 30 pkt max).
 | 5. Gemma 3 4B IT (text-only) | 18 / 30 (60%) | 9/14 | 9/16 pkt |
 | 6. Gemma 3 4B IT (multimodal) | 14 / 30 (47%) | 8/14 | 6/16 pkt |
 | 7. Llama-PLLuM 8B Instruct (CYFRAGOVPL) | 3 / 30 (10%) | 1/14 | 2/16 pkt |
+| 7. PLLuM 12B Instruct (CYFRAGOVPL) | 3 / 30 (10%) | 1/14 | 2/16 pkt |
 
 Pełna tabela per-zadaniowa + wydajność: [`results/raport.md`](results/raport.md).
 
@@ -23,7 +24,7 @@ Pełna tabela per-zadaniowa + wydajność: [`results/raport.md`](results/raport.
 - **Bielik-Minitron 7B** (skompresowana wersja Bielika 11B v3, -33% parametrów przez structured pruning + distillation) wygrywa jako pierwszy model w serii powyżej 80%.
 - **Gemma 4 zrobiła ogromny skok** vs Gemma 3 na tej samej ilości parametrów (+6 pkt) i wyrównała z Bielikiem 4.5B.
 - **Vision tower naprawiony w Gemma 4.** Multimodalność w Gemma 3 zabierała 4 pkt vs text-only. W Gemma 4 zabiera tylko 1 pkt (w granicach szumu sędziego). Małe modele edge dorastają do multimodalności „za darmo".
-- **PLLuM 8B** (polski rządowy LLM) zaskakuje in minus z 3/30, odpowiada bez rozumowania, krótkimi literami. „Polski LLM" to nie automatycznie dobry LLM.
+- **PLLuM nie skaluje się z rozmiarem.** PLLuM 8B (Llama-based) i PLLuM 12B (natywny Mistral-based) dają identyczne 3/30. Problem rodziny PLLuM, nie wersji.
 - Wszystko offline, na Apple Silicon przez MLX, ~3 minuty inferencji per model.
 
 ## Architektura
@@ -38,6 +39,7 @@ Pełna tabela per-zadaniowa + wydajność: [`results/raport.md`](results/raport.
 04_run_bielik.py           →  results/bielik_odpowiedzi.json         (Bielik 4.5B, mlx-lm)
 04b_run_bielik_minitron.py →  results/bielik_minitron_odpowiedzi.json (Bielik-Minitron 7B, mlx-lm)
 04c_run_pllum.py           →  results/pllum_odpowiedzi.json          (Llama-PLLuM 8B, mlx-lm)
+04d_run_pllum12.py         →  results/pllum12_odpowiedzi.json        (PLLuM 12B, mlx-lm)
 05_ocen.py                 →  results/ocena_szczegolowa.json         (Claude sędzią otwartych)
 06_raport.py               →  results/raport.md
 ```
@@ -90,7 +92,8 @@ uv run python scripts/03c_run_gemma4_text.py     # Gemma 4 text-only
 uv run python scripts/03d_run_gemma4_mm.py        # Gemma 4 multimodal
 uv run python scripts/04_run_bielik.py            # Bielik 4.5B v3
 uv run python scripts/04b_run_bielik_minitron.py  # Bielik-Minitron 7B
-uv run python scripts/04c_run_pllum.py            # PLLuM 8B
+uv run python scripts/04c_run_pllum.py            # Llama-PLLuM 8B
+uv run python scripts/04d_run_pllum12.py          # PLLuM 12B
 uv run python scripts/05_ocen.py                  # ocena (Claude sędzia)
 uv run python scripts/06_raport.py                # raport
 ```
@@ -109,6 +112,7 @@ Modele do lokalnej konwersji:
 - **Bielik 4.5B v3 Instruct** (SpeakLeash): polski LLM ogólnego zastosowania, 8-bit MLX (oficjalne wagi).
 - **Bielik-Minitron 7B v3 Instruct** (SpeakLeash): skompresowana wersja **Bielika-11B-v3.0** (-33% parametrów, z 11.04B do 7.35B) przez structured pruning + knowledge distillation z użyciem NVIDIA Model Optimizer i NeMo Framework (podejście inspirowane techniką Minitron). [Paper: arxiv.org/abs/2603.11881](https://arxiv.org/abs/2603.11881). Gated na HF, lokalna konwersja do MLX 8-bit.
 - **Llama-PLLuM 8B Instruct** (CYFRAGOVPL): polski instruction tuning na bazie Llama 3.1 8B, lokalna konwersja do MLX 8-bit.
+- **PLLuM 12B Instruct** (CYFRAGOVPL): natywny dense PLLuM (nie Llama-based, według tokenizera bazuje na Mistral Small), gotowa wersja MLX Q6 z `lukagra/PLLuM-12B-instruct-Q6-mlx`.
 - **Gemma 3 4B IT** (Google): 4-bit MLX, dwa warianty: multimodalny (mlx-vlm z obrazkami) i text-only (mlx-lm z opisami rysunków).
 - **Gemma 4 E4B IT** (Google): nowsza edycja edge, 4-bit MLX, dwa warianty: multimodalny (mlx-vlm z obrazkami) i text-only (mlx-vlm bez obrazków).
 
